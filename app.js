@@ -115,3 +115,22 @@ let confirmStr = ''
 
 
  //END OF PIZZA CREATION AND PRICING
+
+  //3RD INTERFACE
+
+ //If client clicks on cancelOrder , take him back to the first page and reset everything
+ document.querySelector('.cancel').addEventListener('click' , ()=>{
+   window.location.reload()
+ })
+
+ //If client clicks on confirm , open new dialog
+document.querySelector('.confirm').addEventListener('click' ,()=>{
+
+document.querySelector('.checkout').style.display = 'none';
+document.querySelector('.adress-payment-interface').style.display = 'block'
+
+document
+  .querySelector('.adress-payment-interface')
+  .classList.add('adress-interface-animation')
+
+ })
