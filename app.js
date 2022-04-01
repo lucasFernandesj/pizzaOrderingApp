@@ -134,3 +134,79 @@ document
   .classList.add('adress-interface-animation')
 
  })
+
+ 
+ //Submit adress and pay
+ document.querySelector('.submit-adress-payment').addEventListener('click' , (e)=>{
+   e.preventDefault()
+   let city = document.getElementById('city').value
+   let street = document.getElementById('street').value
+   let number = document.getElementById('number').value
+   let phoneNumber = document.getElementById('phone').value
+   let creditCardNumber = document.getElementById('creditCardNumber').value
+   if (
+     city.trim() === '' ||
+     street.trim() === '' ||
+     number.trim() === '' ||
+     phoneNumber.trim() === '' ||
+     creditCardNumber.trim()===''
+     ) {
+       alert('Please check the values')
+       return false
+      }
+      
+      document.querySelector('.adress-payment-interface').style.display = 'none'
+      document.querySelector('.checkout-interface').style.display='flex'
+      document.querySelector('.checkout-interface').style.opacity = 0.95;
+
+
+   let staredCreditCardNumber = cryptoCreditCard()
+     
+     let checkoutStr = `${pizzaInfo[1]}\nDeliver to ${city}, ${street}, ${number}.\nTotal: ${pizzaInfo[0]} NIS \nContact:${phoneNumber}\nPayment with credit card ${staredCreditCardNumber} `
+     
+     document.querySelector('.adress-form').style.display='none'
+     document.querySelector('.checkout-interface').style.display = 'block'
+     
+     
+     document.querySelector('.checkout-str').innerText = checkoutStr
+   
+
+ })
+  
+   
+
+  
+ 
+
+
+
+
+ //Returns credit card number with asterisks
+ const cryptoCreditCard = ()=>{
+   let creditCardNumber = document.getElementById('creditCardNumber').value
+   creditCardNumberArr = creditCardNumber.split('')
+    for(let i = 0 ; i < creditCardNumberArr.length - 4 ; i++){
+      creditCardNumberArr[i] = '*'
+    }
+    let newStr = creditCardNumberArr.join('')
+    return newStr
+ }
+
+  //On checkout confirm interface , if user clicks on CHECKOUT , finish order
+ document.querySelector('.confirm-checkout').addEventListener('click' , ()=>{
+   //checkoutForm hidden
+   document.querySelector('.checkout-interface').style.display='none'
+   //show receipt interface
+   document.querySelector('.receipt-interface').style.display = 'flex'
+ })
+
+ //Click on new-order, reload the page
+ document.querySelector('.new-order').addEventListener('click' , ()=>{
+   window.location.reload()
+ })
+
+
+ //Click on cancel , sends user back to first page
+  document.querySelector('.cancel-checkout').addEventListener('click', () => {
+    window.location.reload()
+  })
