@@ -294,3 +294,310 @@ footer {
         margin-left: 0px;
     }
 }
+
+/* DESKTOP CSS */
+
+@media only screen and (min-width: 768px) {
+
+    @font-face {
+        font-family: 'pizzaFont';
+        src: url('fonts/pizza-hut/hotpizza.ttf');
+    }
+
+    * {
+        font-family: 'pizzaFont';
+        /* font-size: 20px; */
+    }
+
+    body {
+        background-image: url('./media/italianFood.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0px;
+        margin: 0;
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .orderNow {
+        margin-top: 20%;
+
+        background-color: rgb(231, 2, 30);
+        color: white;
+        border-radius: 15px;
+        border: 2px solid black;
+        padding: 10px;
+        animation: changeColor 4s linear infinite;
+        cursor: pointer;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    .size-crust {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 60px;
+    }
+
+    .size {
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+
+    .crust {
+        width: 100px;
+        height: 100px;
+        width: fit-content;
+    }
+
+    .toppings {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form {
+        margin-top: 13vh;
+        display: none;
+        background-color: white;
+        padding: 17px;
+        border-radius: 20px;
+    }
+
+    .form-btn {
+        margin-left: 30%;
+    }
+
+    /* CHECKOUT PAGE */
+    .checkout {
+        margin-top: 5vh;
+        border-radius: 20px;
+        width: 50vw;
+        height: 80vh;
+
+        border: 5px solid red;
+
+
+        padding: 12px;
+        display: none;
+        background-color: azure;
+        opacity: 0.8;
+    }
+
+    .btns-wrapper {
+        margin-left: 30%;
+
+        width: fit-content;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cancel {
+        margin-left: 40px;
+        padding: 5px;
+        border: 5px solid red;
+        background-color: red;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+
+    .confirm {
+        border: 5px solid green;
+        background-color: green;
+        padding: 5px;
+        border-radius: 10px;
+        opacity: 0.9;
+    }
+
+    .pizza-description {
+        font-size: 3em;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .checkout-fade {
+        animation: fadeIn 0.6s linear;
+    }
+
+    /* adress-payment-interface */
+    .adress-payment-interface {
+        margin-top: 5vh;
+        border-radius: 20px;
+        width: 50vw;
+        height: 80vh;
+
+        border: 5px solid red;
+
+        padding: 12px;
+        display: none;
+        background-color: azure;
+        opacity: 0.7;
+    }
+
+    .adress-interface-animation {
+        animation: move-adress-interface 0.5s linear;
+    }
+
+    .adress-interface-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .adress-form {
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .adress-form>input {
+        margin-top: 10px;
+    }
+
+    .after-order-pizza-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .checkout-interface {
+        display: none;
+        /* display changes to flex */
+        margin-top: 5vh;
+        border-radius: 20px;
+        width: 50vw;
+        height: 80vh;
+
+        border: 5px solid red;
+
+        padding: 12px;
+
+        background-color: azure;
+        opacity: 0.7;
+        flex-direction: column;
+        font-size: larger;
+        padding: 10px;
+
+        position: relative;
+    }
+
+    .checkout-str {
+        text-align: center;
+
+    }
+
+
+    .confirm-checkout-btns {
+
+        position: absolute;
+        top: 50%;
+        left: 27%;
+
+
+
+
+        padding: 5px;
+    }
+
+    .confirm-checkout-btns>* {
+        margin-left: 30px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .confirm-checkout-btns>*:hover {
+        font-weight: bolder;
+
+        background-color: white;
+    }
+
+
+
+
+    .receipt-interface {
+        display: none;
+
+        /* display changes to flex */
+        margin-top: 5vh;
+        border-radius: 20px;
+        width: 50vw;
+        height: 80vh;
+
+        border: 5px solid red;
+
+        padding: 12px;
+
+        background-color: azure;
+        opacity: 0.7;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+
+    .new-order {
+        margin-top: 20%;
+
+        background-color: rgb(231, 2, 30);
+        color: white;
+        border-radius: 15px;
+        border: 2px solid black;
+        padding: 10px;
+        animation: changeColor 4s linear infinite;
+        cursor: pointer;
+        width: 10vw;
+    }
+
+
+
+
+
+
+
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    @keyframes changeColor {
+        0% {
+            background: rgb(58, 2, 8);
+        }
+
+        50% {
+            background: rgb(218, 42, 6);
+        }
+
+        100% {
+            background: rgb(51, 1, 1);
+        }
+    }
+
+    @keyframes move-adress-interface {
+        0% {
+            margin-left: 900px;
+        }
+
+        100% {
+            margin-left: 0px;
+        }
+    }
+
+}
