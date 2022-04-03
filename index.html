@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Order btn -->
     <div class="orderNow">
         <h1>Order Now!</h1>
     </div>
     <!-- END of order btn -->
-    
+
     <!-- FORM PIZZA INGREDIENTS -->
     <div class="form">
         <form action="">
-    
-    
+
+
             <div class="size-crust">
                 <div class="crust">
-    
-    
+
+
                     <p>Select crust:</p>
                     <input type="radio" id="glutenFree" name="crust" value="Gluten free">
                       <label for="small">Gluten free</label><br>
@@ -31,7 +33,7 @@
                     <input type="radio" id="regular" name="crust" value="Regular" checked>
                       <label for="big">Regular</label><br>
                 </div>
-    
+
                 <div class="size">
                     <p>Select Size:</p>
                     <input type="radio" id="small" name="size" value="small">
@@ -41,16 +43,16 @@
                     <input type="radio" id="Large" name="size" value="large">
                       <label for="big">Large</label><br>
                 </div>
-    
-    
+
+
                 <!-- end of div size-crust -->
             </div>
-    
-    
+
+
             <p>Select toppings(10 NIS each:):</p>
             <div class="toppings">
-    
-    
+
+
                 <div class="toppings1">
                     <p>
                         <input type="checkbox" id="feta" name="feta cheese">
@@ -71,8 +73,8 @@
                 </div>
                 <!-- End of toppings1 -->
                 <div class="toppings2">
-    
-    
+
+
                     <p>
                         <input type="checkbox" id="greenOlives" name="green olives">
                         <label for="greenOlives">Green olives</label>
@@ -93,17 +95,17 @@
             </div>
             <button class="form-btn">Check out</button>
         </form>
-    
+
     </div>
     <!--END OF FORM PIZZA INGREDIENTS -->
 
     <!-- CONFIRM INTERFACE -->
     <div class="checkout">
-    
+
         <div class="pizza-description"></div>
-    
+
         <div class="btns-wrapper">
-    
+
             <div class="confirm">
                 <h1>Confirm</h1>
             </div>
@@ -113,53 +115,54 @@
         </div>
     </div>
     <!-- END OF CONFIRM -->
-<!-- Adress form -->
-<div class="adress-payment-interface">
-    <div class="adress-interface-inner">
-        <h1 class="adress-payment-interface-header">Please enter your adress</h1>
+    <!-- Adress form -->
+    <div class="adress-payment-interface">
+        <div class="adress-interface-inner">
+            <h1 class="adress-payment-interface-header">Please enter your adress</h1>
 
-        <form action="" class="adress-form">
-            <input type="text" name="city" id="city" placeholder="City" required />
-            <input type="text" name="street" id="street" placeholder="Street" required />
-            <input type="text" name="number" id="number" placeholder="number" required />
-            <input type="text" name="phone" id="phone" placeholder="Phone number" required />
-            <input type="text" name="creditCardNumber" id="creditCardNumber" placeholder="Credit card number"
-                required />
-            <input type="text" name="cvs" id="cvs" placeholder="cvs" required />
-            <input type="submit" value="Confirm" class="submit-adress-payment">
-        </form>
+            <form action="" class="adress-form">
+                <input type="text" name="city" id="city" placeholder="City" required />
+                <input type="text" name="street" id="street" placeholder="Street" required />
+                <input type="text" name="number" id="number" placeholder="number" required />
+                <input type="text" name="phone" id="phone" placeholder="Phone number" required />
+                <input type="text" name="creditCardNumber" id="creditCardNumber" placeholder="Credit card number"
+                    required />
+                <input type="text" name="cvs" id="cvs" placeholder="cvs" required />
+                <input type="submit" value="Confirm" class="submit-adress-payment">
+            </form>
+        </div>
+
+    </div>
+    <!-- CHECKOUT -->
+    <div class="checkout-interface">
+
+        <div class="after-order-pizza-info">
+            <div class="order"></div>
+            <div class="order-price"></div>
+        </div>
+
+        <div class="checkout-str"></div>
+        <div class="confirm-checkout-btns">
+            <button class="confirm-checkout">CHECKOUT!</button>
+            <button class="cancel-checkout">Cancel</button>
+
+        </div>
+
     </div>
 
-</div>
-<!-- CHECKOUT -->
-<div class="checkout-interface">
-
-    <div class="after-order-pizza-info">
-        <div class="order"></div>
-        <div class="order-price"></div>
+    <!-- CHECKOUT confirmed -->
+    <div class="receipt-interface">
+        <h1>Your order in on it's way!</h1>
+        <div class="new-order">New Order</div>
     </div>
 
-<div class="checkout-str"></div>
-<div class="confirm-checkout-btns">
-    <button class="confirm-checkout">CHECKOUT!</button>
-    <button class="cancel-checkout">Cancel</button>
-
-</div>
-
-</div>
-
-<!-- CHECKOUT confirmed -->
-<div class="receipt-interface">
-    <h1>Your order in on it's way!</h1>
-    <div class="new-order">New Order</div>
-</div>
 
 
 
-
-<footer>Pizza font from https://www.1001freefonts.com/pizza-hut.font</footer>
-<script src="app.js"></script>
+    <footer>Pizza font from https://www.1001freefonts.com/pizza-hut.font</footer>
+    <script src="app.js"></script>
 
 
 </body>
+
 </html>
